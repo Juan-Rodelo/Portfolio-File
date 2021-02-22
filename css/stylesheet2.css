@@ -4,14 +4,20 @@ body {
   font-size: 16px;
 }
 
-* {
+{
   box-sizing: border-box;
+
+  /* tells the browser to account for any border and padding in the values
+  you specify for an element's width and height. If you set an element's
+  width to 100 pixels, that 100 pixels will include any border or padding
+  you added, and the content box will shrink to absorb that extra width.
+  This typically makes it much easier to size elements. */
 }
 
-:root {
+root {
   --links-visited: #80d4ff;
   --links: #99b3ff;
-  --big-fonts: #660066;
+  --big-fonts: #606;
   --basic-font: 14px;
 }
 
@@ -23,23 +29,21 @@ body {
 
 .grid__item {
   background-color: lightgray;
-  padding:10px;
+  padding: 10px;
 }
-
 
 .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
 }
 
-header{
+header {
   margin-left: 10px;
 }
 
-
 a {
   font-size: var(--basic-font);
-  margin-left:10px;
+  margin-left: 10px;
   color: #99b3ff;
 }
 
@@ -58,6 +62,7 @@ a {
   text-align: right;
   margin-right: 40px;
 }
+
 .navigation-list {
   list-style-type: none;
 }
@@ -67,8 +72,8 @@ a {
   margin-left: 15px;
 }
 
-.my_picture{
-  float:left;
+.my_picture {
+  float: left;
   width: 20%;
   height: auto;
   margin-right: 30px;
@@ -76,43 +81,44 @@ a {
   border-radius: 50%;
 }
 
-.profile{
+.profile {
   max-width: 700px;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-#my_name, #hello_world, #my_code {
+#my_name,
+#hello_world,
+#my_code {
   margin-top: 4px;
   margin-bottom: 4px;
   font-size: 2px;
-  text-align:left;
+  text-align: left;
 }
 
 .page-footer {
   clear: both;
   margin-top: 100px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 .contact_info {
   margin-top: 35px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.about_table{
+.about_table {
   margin: 0 auto;
   padding: 10px;
 }
 
-
-.about_center{
+.about_center {
   margin-top: 25px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
 }
@@ -124,26 +130,24 @@ a {
   text-align: center;
 } another way of doing this */
 
-.button1{
+.button1 {
   margin-top: 25px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .form {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 200px;
-  margin:  0 auto;
+  margin: 0 auto;
   padding-top: 50px;
-
 }
 
-
-a:hover a:focus{
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
   font-size: 18px;
@@ -156,7 +160,7 @@ a:visited {
 
 a:active {
   /* selected link */
-  color: #000000;
+  color: #000;
 }
 
 #hello_world {
@@ -164,36 +168,47 @@ a:active {
   color: var(--big-fonts);
   font-size: 30px;
   font-weight: 900;
-  }
-#my_name{
+}
+
+#my_name {
   font-size: 21px;
 }
-p{
-  margin-left: 10px;
-}
-div{
+
+p {
   margin-left: 10px;
 }
 
-button,.button {
+div {
+  margin-left: 10px;
+}
+
+button,
+.button {
   /* overwrites browser defaults and resets the border */
   border: none;
+
   /* takes the font from the outer container */
   font-family: 'Bungee Shade', cursive;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--big-fonts);
   color: white;
   text-decoration: none;
+
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition-duration: 0.5s;
   transition: 1 opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus{
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -206,7 +221,8 @@ button:hover, button:focus, .button:hover, .button:focus{
   transition: 1 opacity;
 }
 
-#my_code:hover, #my_code:focus{
+#my_code:hover,
+#my_code:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -216,24 +232,25 @@ button:hover, button:focus, .button:hover, .button:focus{
 
 .button {
   background-color: var(--big-fonts);
-  color: #ffffff;
+  color: #fff;
   font-size: 30px;
 }
 
 .default_button {
   background-color: var(--big-fonts);
-  color: #ffffff;
-
+  color: #fff;
 }
 
 @keyframes color-change {
   from {
     fill: #edc655;
   }
+
   to {
     fill: #f76414;
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
@@ -242,12 +259,13 @@ button:hover, button:focus, .button:hover, .button:focus{
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(400px, 50px);
   }
 }
 
-.cloud-front{
+.cloud-front {
   animation: 25s cloud-move infinite alternate linear;
 }
 
@@ -255,6 +273,7 @@ button:hover, button:focus, .button:hover, .button:focus{
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(50px, 48px);
   }
@@ -268,6 +287,7 @@ button:hover, button:focus, .button:hover, .button:focus{
   from {
     transform: translate(300px, 50px);
   }
+
   to {
     transform: translate(-200px, 50px);
   }
@@ -277,25 +297,28 @@ button:hover, button:focus, .button:hover, .button:focus{
   animation: 13s zeppelin-move-reverse infinite normal linear;
 }
 
-
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
