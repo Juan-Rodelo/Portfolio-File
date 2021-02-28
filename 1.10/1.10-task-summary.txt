@@ -1,0 +1,32 @@
+Linters used:
+-W3C Validation
+-stylelint
+
+I used https://live.browserstack.com/
+
+I tried on several browsers.
+
+Firefox:
+The logo doesn't appear as signs but words
+The link to the code in Home page is not aligned
+
+Opera: Works great
+
+Internet Explorer:
+The link to the code in Home page is not aligned
+
+Real Edge:
+works great
+
+samsung galaxy:
+The logo doesn't appear as signs but words
+
+iphone 12:
+The logo doesn't appear as signs but words
+The link to the code in Home page is not aligned
+
+I have to update all the pages for mobile devices so they will resize accordingly
+as I did with the work section.
+Something is wrong with the svg in some browsers and all mobile devices.
+Need to align the link to the code.
+I'm going to take the next week to redesign a web pae and adapt it to my own design.
